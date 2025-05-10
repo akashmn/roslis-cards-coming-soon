@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1>Welcome to Roslis cards</h1>
+      <h1>Welcome to Roslis</h1>
       <h2>Coming soon</h2>
     </>
   )
