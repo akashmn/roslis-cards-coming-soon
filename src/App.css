@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #1a4d2e;
+  --secondary-color: #f9f9f9;
+  --accent-color: #45b26b;
+  --background-color: #ffffff;
+  --text-color: #2c3e50;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --nav-bg: #1a4d2e;
+  --nav-text: #ffffff;
+  --nav-hover: #45b26b;
+  --nav-active: #2ecc71;
+  --nav-border: rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Reusable animations */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-.card {
-  padding: 2em;
+/* Global hover styles for clickable elements */
+button, a {
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover, a:hover {
+  transform: translateY(-2px);
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
 }

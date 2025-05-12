@@ -1,11 +1,16 @@
 import './App.css'
+import Footer from './Components/Footer'
+import Hero from './Components/Hero'
+import Navbar from './Components/Navbar'
+
 
 function App() {
 
   return (
     <>
-      <h1>Welcome to Roslis</h1>
-      <h2>Coming soon</h2>
+      <Navbar />
+      <Hero />
+      <Footer />
     </>
   )
 }
